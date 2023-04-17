@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/btn_parar"
+        android:layout_width="73dp"
+        android:layout_height="71dp"
+        android:layout_marginStart="12dp"
+        android:background="@drawable/detener"
+        android:contentDescription="@string/app_name"
+        android:onClick="Stop"
+        app:layout_constraintBottom_toBottomOf="@+id/btn_repetir"
+        app:layout_constraintStart_toEndOf="@+id/btn_reproducir"
+        app:layout_constraintTop_toBottomOf="@+id/imageView"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <Button
+        android:id="@+id/btn_siguiente"
+        android:layout_width="66dp"
+        android:layout_height="71dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="68dp"
+        android:background="@drawable/siguiente"
+        android:contentDescription="@string/app_name"
+        android:onClick="Siguiente"
+        app:layout_constraintStart_toEndOf="@+id/btn_anterior"
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+    <Button
+        android:id="@+id/btn_anterior"
+        android:layout_width="64dp"
+        android:layout_height="71dp"
+        android:layout_marginStart="16dp"
+        android:background="@drawable/anterior"
+        android:contentDescription="@string/app_name"
+        app:layout_constraintBottom_toBottomOf="@+id/btn_siguiente"
+        app:layout_constraintStart_toEndOf="@+id/btn_repetir"
+        app:layout_constraintTop_toBottomOf="@+id/imageView"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <Button
+        android:id="@+id/btn_reproducir"
+        android:layout_width="75dp"
+        android:layout_height="74dp"
+        android:layout_marginStart="16dp"
+        android:background="@drawable/reproducir"
+        android:contentDescription="@string/app_name"
+        android:onClick="PlayPause"
+        app:layout_constraintBottom_toBottomOf="@+id/btn_parar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <Button
+        android:id="@+id/btn_repetir"
+        android:layout_width="71dp"
+        android:layout_height="71dp"
+        android:background="@drawable/repetir"
+        android:contentDescription="@string/app_name"
+        android:onClick="repetir"
+        app:layout_constraintBottom_toBottomOf="@+id/btn_anterior"
+        app:layout_constraintStart_toEndOf="@+id/btn_parar"
+        app:layout_constraintTop_toBottomOf="@+id/imageView"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="411dp"
+        android:layout_height="428dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/portada1" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
